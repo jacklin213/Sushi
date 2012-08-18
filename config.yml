@@ -1,0 +1,12 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                Sushi - test config                   | #
+# +------------------------------------------------------+ #
+############################################################
+# This is config made by jackli213
+# This Config was made funtional on the 18/08/12
+
+Sushi:
+  # RawFishAmmount is how many RawFish you want to spawn when you use the /sushi command
+  # By default this is set to "10"
+  RawFishAmount: 10 
