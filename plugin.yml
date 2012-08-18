@@ -1,0 +1,50 @@
+name: Sushi
+version: 1.2.4
+description: A Plugin which gives you Sushi
+author: Jacklin213
+
+main: me.jacklin213.sushi.Sushi
+
+commands:
+    Sushi:
+        description: Gives you Raw fish
+        usage: Correct usage is /sushi
+        permissions: sushi.give
+        permissions-message: You DO NOT have the permission to get Sushi
+    Sushi info:
+        description: Shows info on the Sushi plugin
+        usage: Correct usage is /sushi info
+    Help Sushi:
+        description: Shows the bukkti built help page (this page)
+        usage: Correct usage is /help sushi
+    Sushi reload:
+        description: Reloads config file
+        usage: Correct usage is /sushi reload
+        permissions: sushi.reload
+    Sushiset rawfishamount:
+        description: Changes how much raw fish is given on /sushi
+        usage: Correct usage is /sushiset rawfishammount [ammount]
+        aliases: [ss rfa]
+        permissions: sushi.setrawfishammount
+    Sushiset:
+        description: Sushiset part of Sushi plugin
+        aliases: [ss]
+        
+permissions:
+  sushi.*:
+    description: Allows use of all Sushi commands
+    default: op
+    children:
+      sushi.use: true
+      sushi.reload: true 
+      sushi.setrawfishammount: true
+    sushi.use:
+      description: Allows person to spawn Raw fish
+      default: op
+    sushi.reload:
+      description: Allows person to reload the config file
+      default: op
+    sushi.setrawfishamount:
+      description: Allows person to set RawFish obtained when using /sushi
+      default: op
+        
