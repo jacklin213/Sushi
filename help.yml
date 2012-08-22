@@ -1,0 +1,8 @@
+general-topics:
+    Sushi:
+        shortText: Rules of the server
+        fullText: |
+            &61. /Sushi - Grants player a stack of 64 Raw fish
+            &61. /Sushi info - Shows info page
+            &61. /Sushi help - Shows this page
+command-topics-in-master-index: true
