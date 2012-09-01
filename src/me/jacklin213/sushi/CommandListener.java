@@ -97,6 +97,12 @@ public class CommandListener implements CommandExecutor {
 		// Start of sushiset commands
 		if (commandLabel.equalsIgnoreCase("sushiset")
 				|| (commandLabel.equalsIgnoreCase("ss"))) {
+			
+			sender.sendMessage(ChatColor.AQUA + "-------------------------");
+			sender.sendMessage(ChatColor.GREEN
+					+ "Welcome to the sushiset section");
+			sender.sendMessage(ChatColor.GOLD + "Type in /sushiset help");
+			sender.sendMessage(ChatColor.AQUA + "-------------------------");
 			if (args.length >= 1) {
 				if (args[0].equalsIgnoreCase("help")) {
 					sender.sendMessage("Type /help sushi and look for the /sushiset commands");
@@ -130,21 +136,17 @@ public class CommandListener implements CommandExecutor {
 							+ "This command isn't recongnised. Try using /ss rfa [Amount]");
 					return true;
 				}
-			} else {
-				sender.sendMessage(ChatColor.RED
-						+ "Not enough arguments, Type /sushi help or /ss help for help");
 			}
 			// end of sushiset args.length >= 1
 
-			sender.sendMessage(ChatColor.AQUA + "-------------------------");
-			sender.sendMessage(ChatColor.GREEN
-					+ "Welcome to the sushiset section");
-			sender.sendMessage(ChatColor.GOLD + "Type in /sushiset help");
-			sender.sendMessage(ChatColor.AQUA + "-------------------------");
+			
 
 		}
 
 		return false;
 	} // End of whole command
 
+	
+	
+	
 }
