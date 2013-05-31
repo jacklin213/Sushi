@@ -10,3 +10,5 @@ Sushi:
   # RawFishAmmount is how many RawFish you want to spawn when you use the /sushi command
   # By default this is set to "10"
   RawFishAmount: 10 
+  # In seconds
+  Cooldown: 10

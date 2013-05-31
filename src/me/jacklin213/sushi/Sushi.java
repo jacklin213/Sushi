@@ -2,36 +2,33 @@ package me.jacklin213.sushi;
 
 import java.io.File;
 import java.util.logging.Logger;
-import org.bukkit.event.Listener;
-import org.bukkit.permissions.Permission;
-import org.bukkit.plugin.PluginDescriptionFile;
+
+import me.jacklin213.sushi.commands.SushiCommand;
+import me.jacklin213.sushi.commands.SushiSet;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Sushi extends JavaPlugin implements Listener {
+public class Sushi extends JavaPlugin {
 	// define stuff
-	PluginDescriptionFile pdfFile;
 	public static Sushi plugin;
+	
 	public final Logger log = Logger.getLogger("Minecraft");
-	public final CommandListener cl = new CommandListener(this);
-	public static Permission Permissions = null;
+	public final SushiCommand sc = new SushiCommand(this);
+	public final SushiSet ss = new SushiSet(this);
 
 	// What to do onEnable
 	public void onEnable() {
-		this.pdfFile = getDescription();
-		this.getLogger().info(this.pdfFile.getName() + " By "
-				+ this.pdfFile.getAuthors() + " is now enabled!.");
+		log.info(String.format("[%s] Version: %s by jacklin213 has been enabled!", getDescription().getName(), getDescription().getVersion()));
 		createconfig();
-		getCommand("sushi").setExecutor(cl);
-		getCommand("sushiset").setExecutor(cl);
+		getCommand("sushi").setExecutor(sc);
+		getCommand("sushiset").setExecutor(ss);
 	}
 
 	// what to do onDisable
 	public void onDisable() {
-		this.pdfFile = getDescription();
-		this.getLogger().info(this.pdfFile.getName() + " is now disabled.");
+		log.info(String.format("[%s] by jacklin213 has been disabled!", getDescription().getName()));
 	}
 
-	
 
 	public void createconfig() {
 		// Creates config.yml
